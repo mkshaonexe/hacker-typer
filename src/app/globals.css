@@ -328,6 +328,14 @@ html, body {
   50% { border-color: var(--color-accent); }
 }
 
+/* Active file tree item */
+.active-file-item {
+  background-color: rgba(124, 58, 237, 0.15);
+  color: #A78BFA;
+  border-left: 2px solid #7C3AED;
+  border-radius: 0 4px 4px 0 !important;
+}
+
 /* Disable styles for motion reduction */
 @media (prefers-reduced-motion: reduce) {
   * {
