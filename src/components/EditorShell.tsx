@@ -10,11 +10,8 @@ import { PanelLeftClose, PanelLeft } from 'lucide-react';
 
 export const EditorShell: React.FC = () => {
   const { 
-    activeFile, 
     advanceReveal, 
-    isAutoTyping, 
-    stopAutoType, 
-    autoTypeSpeed 
+    isAutoTyping 
   } = useEditorStore();
   const { playClick, initAudio } = useSound();
   const [sidebarOpen, setSidebarOpen] = useState(true);

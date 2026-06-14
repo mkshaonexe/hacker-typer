@@ -5,6 +5,7 @@ import { Sparkles, Terminal } from 'lucide-react';
 
 export const EditorArea: React.FC = () => {
   const { activeFile, files, revealProgress, typingCompleted } = useEditorStore();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const editorRef = useRef<any>(null);
 
   const getLanguage = (path: string) => {
@@ -18,6 +19,7 @@ export const EditorArea: React.FC = () => {
     return 'plaintext';
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleEditorMount = (editor: any) => {
     editorRef.current = editor;
   };

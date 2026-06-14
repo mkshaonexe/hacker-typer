@@ -42,8 +42,8 @@ export const LandingScreen: React.FC = () => {
     try {
       const files = await parseZipFile(file);
       loadProject(files);
-    } catch (err: any) {
-      setError(err?.message || 'Failed to parse the ZIP file.');
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to parse the ZIP file.');
     } finally {
       setLoading(false);
     }
